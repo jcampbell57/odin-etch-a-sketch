@@ -29,3 +29,7 @@
     background-color: aquamarine;
     border: 1px solid blue;
 }
+
+.cell:hover {
+    background-color: darkred;
+}
