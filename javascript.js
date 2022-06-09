@@ -1,6 +1,7 @@
 
 //default
 let defaultSize = 16;
+let color = 'black';
 const sketchpad = document.querySelector('.sketchpad');
 
 //generate grid with css grid
@@ -38,19 +39,50 @@ function generate(size) {
 };
 
 //mouseover color change
-sketchpad.addEventListener('mouseover', changeColor);
-function changeColor(e) {
-    let cell = e.target;
-    let red = Math.floor((Math.random() * 256) +1);
-    let green = Math.floor((Math.random() * 256) +1);
-    let blue = Math.floor((Math.random() * 256) +1);
-    return cell.style.backgroundColor = `rgb(${red},${green},${blue})`;
+sketchpad.addEventListener('mouseover', colorCell);
+function colorCell(e) {
+    if (color === 'Random') {
+        let cell = e.target
+        let red = Math.floor((Math.random() * 256) +1);
+        let green = Math.floor((Math.random() * 256) +1);
+        let blue = Math.floor((Math.random() * 256) +1);
+        cell.style.backgroundColor = `rgb(${red},${green},${blue})`;
+    } else if (color === 'Reds') {
+        let cell = e.target
+        let red = Math.floor((Math.random() * 199) + 65);
+        cell.style.backgroundColor = `rgb(${red},0,0`;
+    } else if (color === 'Greens') {
+        let cell = e.target
+        let green = Math.floor((Math.random() * 199) + 65);
+        cell.style.backgroundColor = `rgb(0,${green},0)`;
+    } else if (color === 'Blues') {
+        let cell = e.target
+        let blue = Math.floor((Math.random() * 199) + 65);
+        cell.style.backgroundColor = `rgb(0,0,${blue})`;
+    } else if (color === 'Cyans') {
+        let cell = e.target
+        let red = Math.floor((Math.random() * 199) + 65);
+        cell.style.backgroundColor = `rgb(${red},255,255`;
+    } else if (color === 'Pinks') {
+        let cell = e.target
+        let green = Math.floor((Math.random() * 199) + 65);
+        cell.style.backgroundColor = `rgb(255,${green},255)`;
+    } else if (color === 'Yellows') {
+        let cell = e.target
+        let blue = Math.floor((Math.random() * 199) + 65);
+        cell.style.backgroundColor = `rgb(255,255,${blue})`;
+    } else {
+        let cell = e.target
+        cell.style.backgroundColor = color
+    }
 }
-/* cell.addEventListener('mouseenter', (e) => {
-    console.log(e)
-    cell.style.backgroundColor = 'darkred'
-})     */
 
+function changeColor(choice) {
+    color = choice;
+}
+
+function randomColor() {
+}
 
 //reset board
 function reset() {

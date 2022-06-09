@@ -17,12 +17,23 @@
             </div>
             <br>
             <div class="buttons">
+                Color choices:<br>
+                <div class="colorChoices">
+                    <button onclick="changeColor('Black')">Black</button>
+                    <button onclick="changeColor('Grey')">Grey</button>
+                    <button onclick="changeColor('Random')">Random</button>
+                    <br><button onclick="changeColor('Reds')">Reds</button>
+                    <button onclick="changeColor('Greens')">Greens</button>
+                    <button onclick="changeColor('Blues')">Blues</button>
+                    <br><button onclick="changeColor('Cyans')">Cyans</button>
+                    <button onclick="changeColor('Pinks')">Pinks</button>
+                    <button onclick="changeColor('Yellows')">Yellows</button>
+                </div>
+                <br><br><button onclick="changeColor('White')">Eraser</button>
+                <br><br>Cells per side:<br>
+                <input onchange="changeSize(this.value)">
+                <button>Submit</button>
                 <button onclick="reset()">Reset</button>
-                <button class="black">Black</button>
-                <button class="grey">Grey</button>
-                <button class="random">Random</button>
-                <br>Cells per side:
-                <br><input onchange="changeSize(this.value)"><button>Submit</button>
             </div>
         </div>
         <div class="footer">

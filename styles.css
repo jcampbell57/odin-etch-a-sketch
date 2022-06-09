@@ -28,6 +28,10 @@
     box-sizing: border-box;
 }
 
+.colorChoices {
+/*     display: flex; */
+}
+
 /* .cell:hover {
     background-color: darkred;
 } */
