@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" defer></script>
-    <title>Etch-A-Sketch</title>
+    <title>Sketch Pad</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
-
+            <h1 id="title">Sketch Pad</h1>
         </div>
         <div class="body">
-            <div class="sketch">
+            <div class="sketchpad">
+            </div>
+            <br>
+            <div class="buttons">
+                <button onclick="reset()">Reset</button>
+                <button class="black">Black</button>
+                <button class="grey">Grey</button>
+                <button class="random">Random</button>
+                <br>Cells per side:
+                <br><input onchange="changeSize(this.value)"><button>Submit</button>
             </div>
         </div>
         <div class="footer">
@@ -22,4 +30,5 @@
         </div>
     </div>
 </body>
+<script src="javascript.js"></script>
 </html>
