@@ -93,8 +93,13 @@ function reset() {
 //change cell size with input 
 function changeSize(input) {
     if (input > 1 && input < 101) {
+        const error = document.querySelector('#error');
+        error.textContent = ' '
         generate(input);
     } else {
+        const error = document.querySelector('#error');
+        error.style.color = 'red';
+        error.textContent = 'Please enter a number between 2 and 100.'
         console.log('error!')
     }
 
