@@ -1,6 +1,10 @@
+html {
+    background-color: lightslategray;
+}
 
 #title {
     text-align: center;
+    color: white;
 }
 
 .body {
@@ -19,8 +23,21 @@
     border: 1px solid black;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
 .row {
     display: inline-block;
+}
+
+button {
+    width: 80px;
 }
 
 .cell {
@@ -29,7 +46,8 @@
 }
 
 .colorChoices {
-/*     display: flex; */
+    display: flex;
+    flex-direction: column;
 }
 
 /* .cell:hover {

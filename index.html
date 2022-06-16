@@ -17,23 +17,31 @@
             </div>
             <br>
             <div class="buttons">
-                Color choices:<br>
+                <p>Color choices:</p>
                 <div class="colorChoices">
-                    <button onclick="changeColor('Black')">Black</button>
-                    <button onclick="changeColor('Grey')">Grey</button>
-                    <button onclick="changeColor('Random')">Random</button>
-                    <br><button onclick="changeColor('Reds')">Reds</button>
-                    <button onclick="changeColor('Greens')">Greens</button>
-                    <button onclick="changeColor('Blues')">Blues</button>
-                    <br><button onclick="changeColor('Cyans')">Cyans</button>
-                    <button onclick="changeColor('Pinks')">Pinks</button>
-                    <button onclick="changeColor('Yellows')">Yellows</button>
+                    <div class="row">
+                        <button onclick="changeColor('Black')">Black</button>
+                        <button onclick="changeColor('Grey')">Grey</button>
+                        <button onclick="changeColor('Random')">Random</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="changeColor('Reds')">Reds</button>
+                        <button onclick="changeColor('Greens')">Greens</button>
+                        <button onclick="changeColor('Blues')">Blues</button>
+                        </div>
+                    <div class="row">
+                        <button onclick="changeColor('Cyans')">Cyans</button>
+                        <button onclick="changeColor('Pinks')">Pinks</button>
+                        <button onclick="changeColor('Yellows')">Yellows</button>
+                    </div>
                 </div>
-                <br><br><button onclick="changeColor('White')">Eraser</button>
-                <br><br>Cells per side:<br>
-                <input onchange="changeSize(this.value)">
-                <button>Submit</button>
-                <button onclick="reset()">Reset</button>
+                <br><button onclick="changeColor('White')">Eraser</button><br>
+                <p>Cells per side:</p>
+                <div class="row">
+                    <input onchange="changeSize(this.value)">
+                    <button>Submit</button>
+                    <button onclick="reset()">Reset</button>
+                    </div>
                 <br><p id = "error"></p>
             </div>
         </div>
